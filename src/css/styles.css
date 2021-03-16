@@ -58,11 +58,24 @@ a {
           align-items: center;
 }
 
-.header nav a {
+.header nav .categoria {
+  background-color: transparent;
   color: #111;
-  font-size: 2rem;
+  font-size: 1.8rem;
   text-transform: uppercase;
   padding: 10px 20px;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.header nav .categoria:focus {
+  outline: none;
+}
+
+.header nav .categoria:hover {
+  cursor: pointer;
+  background-color: brown;
+  color: whitesmoke;
 }
 
 .header nav button {
@@ -72,11 +85,15 @@ a {
 
 .header nav button:focus {
   outline: none;
+}
+
+.header nav button:hover {
   cursor: pointer;
 }
 
 .header nav button .nav__carrito {
-  font-size: 26px;
+  margin-left: 15px;
+  font-size: 2.4rem;
   color: brown;
 }
 

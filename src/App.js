@@ -5,7 +5,7 @@ function App() {
   return (
     <div>
       <NavComponent />
-      <ItemListContainer />
+      <ItemListContainer greeting="¡Nuestros últimos productos!"/>
     </div>
   );
 }

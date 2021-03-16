@@ -1,9 +1,9 @@
 import React from 'react';
 import CardComponent from './CardComponent';
 
-const ItemListContainer = ()=>{
+const ItemListContainer = ({greeting})=>{
     return <section className="productos">
-        <h2>Nuestros productos</h2>
+        <h2>{greeting}</h2>
         <div className="contenedorProductos">
             <CardComponent titulo="Whisky 1" imagen='/img/whisky.jpg' descripcion="Un buen whisky" precio="$1000"/>
             <CardComponent titulo="Whisky 2" imagen='/img/whisky.jpg' descripcion="Un super buen whisky" precio="$3000"/>

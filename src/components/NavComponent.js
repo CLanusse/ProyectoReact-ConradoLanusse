@@ -6,9 +6,10 @@ const NavComponent = ()=>{
                 <h1>Logo E-Commerce</h1>
 
                 <nav>
-                    <a href="#">Nosotros</a>
-                    <a href="#">Productos</a>
-                    <a href="#">Contacto</a>
+                    <button className="categoria">Vinos</button>
+                    <button className="categoria">Cervezas</button>
+                    <button className="categoria">Licores</button>
+                    <button className="categoria">Aperitivos</button>
                     <CartWidget contador={0} />
                 </nav>
             </header>
