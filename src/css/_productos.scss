@@ -1,0 +1,37 @@
+.productos {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        text-transform: uppercase;
+        font-size: 3rem;
+        margin-bottom: 30px;
+    }
+
+    .contenedorProductos {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .cardComponent {
+            max-width: 200px;
+            margin: 20px;
+            margin-bottom: 30px;
+            padding: 10px 0;
+            box-shadow: 2px 6px 4px 4px rgba(0,0,0,0.3);
+            h3 {
+                text-align: center;
+                font-size: 2.6rem;
+            }
+            img {
+                width: 100%;
+            }
+            p {
+                margin-top: 10px;
+                padding: 0 20px;
+            }
+        }
+    }
+}

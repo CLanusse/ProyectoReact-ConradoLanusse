@@ -24,5 +24,21 @@
             text-transform: uppercase;
             padding: 10px 20px;
         }
+        button {
+            background-color: transparent;
+            border: none;
+            &:focus {
+                outline: none;
+                cursor: pointer;
+            }
+            .nav__carrito {
+                font-size: 26px;
+                color: brown;
+            }
+            span {
+                color: brown;
+                font-size: 2rem;
+            }
+        }
     }
 }

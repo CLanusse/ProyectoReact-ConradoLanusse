@@ -1,4 +1,5 @@
 import React from 'react';
+import CartWidget from './CartWidget'
 
 const NavComponent = ()=>{
     return <header className="header">
@@ -8,6 +9,7 @@ const NavComponent = ()=>{
                     <a href="#">Nosotros</a>
                     <a href="#">Productos</a>
                     <a href="#">Contacto</a>
+                    <CartWidget contador={0} />
                 </nav>
             </header>
     

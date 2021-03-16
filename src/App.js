@@ -1,9 +1,11 @@
-import NavComponent from './components/nav-component'
+import NavComponent from './components/NavComponent'
+import ItemListContainer from './components/ItemListContainer'
 
 function App() {
   return (
-    <div className="App">
+    <div>
       <NavComponent />
+      <ItemListContainer />
     </div>
   );
 }
