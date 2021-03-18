@@ -36,14 +36,7 @@
             }
         }
         button {
-            background-color: transparent;
-            border: none;
-            &:focus {
-                outline: none;
-            }
-            &:hover {
-                cursor: pointer;
-            }
+            
             .nav__carrito {
                 margin-left: 15px;
                 font-size: 2.4rem;

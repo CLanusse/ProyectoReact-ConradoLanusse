@@ -32,6 +32,46 @@
                 margin-top: 10px;
                 padding: 0 20px;
             }
+
+            .contador-card {
+                margin-top: 10px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                padding: 0 20px;
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 10px;
+                    align-items: center;
+                    border: 2px solid lightseagreen;
+                    border-radius: 2px; 
+                    color: lightseagreen;
+                    p {
+                        margin: 0;
+                    }
+                    button {
+                        color: lightseagreen;
+                        font-size: 2.4rem;
+                        padding: 0 10px;
+                        height: 32px;
+                        width: 32px;
+                        &:hover {
+                            background-color: lightseagreen;
+                            color: white;
+                        }
+                    }
+                }
+                .boton-agregar {
+                    background-color: lightseagreen;
+                    color: white;
+                    font-size: 1.6rem;
+                    padding: 10px 0;
+                    &:hover {
+                        opacity: 0.9;
+                    }
+                }
+            }
         }
     }
 }

@@ -19,3 +19,13 @@ body {
 a {
     text-decoration: none;
 }
+button {
+    background-color: transparent;
+            border: none;
+            &:focus {
+                outline: none;
+            }
+            &:hover {
+                cursor: pointer;
+            }
+}
