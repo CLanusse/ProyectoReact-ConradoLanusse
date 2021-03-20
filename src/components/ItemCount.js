@@ -1,18 +1,19 @@
 import React, {useState} from 'react';
 
-const ItemCount = ({stock})=>{
-    const [counter, setCounter] = useState(0);
+const ItemCount = ({stock, onAdd})=>{
+    const [counter, setCounter] = useState(1);
 
-    const sumarCantidad = ()=> counter+1<=stock ? setCounter(counter + 1) : setCounter(counter);
-    const restarCantidad = ()=> counter-1>=0 ? setCounter(counter - 1) : setCounter(0);
-
+    const sumarCantidad = ()=> counter+1 <= stock ? setCounter(counter + 1) : setCounter(counter);
+    const restarCantidad = ()=> counter-1 >= 1 ? setCounter(counter - 1) : setCounter(1);
+    const addHandler = ()=> onAdd(counter);
+    
     return <div className="contador-card">
                 <div>
                     <button onClick={restarCantidad}>-</button>
                     <p>{counter}</p>
                     <button onClick={sumarCantidad}>+</button>
                 </div>
-                <button className="boton-agregar">Agregar al carrito</button>
+                <button onClick={addHandler} className="boton-agregar">Agregar al carrito</button>
             </div>
 }
 
