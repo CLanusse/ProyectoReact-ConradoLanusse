@@ -10,7 +10,7 @@ const ItemDetailContainer = () => {
         getStock().then(res => setItem(res.find(prod => prod.id === 3)))
     }, [])
 
-    return <ItemDetail item={item}/>
+    return <ItemDetail {...item}/>
 }
 
 export default ItemDetailContainer;

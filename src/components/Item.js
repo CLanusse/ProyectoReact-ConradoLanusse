@@ -1,16 +1,16 @@
 import React from 'react';
 import ItemCount from './ItemCount';
 
-const Item = ({item}) => {
+const Item = ({title, img, description, precio, stock}) => {
 
-    const agregarAlCarrito = (cantidad)=> {console.log(`Agregados ${cantidad} ${item.title} al carrito`)};
+    const agregarAlCarrito = (cantidad)=> {console.log(`Agregados ${cantidad} ${title} al carrito`)};
 
-    return <div key={item.id} className="cardComponent">
-            <h3>{item.title}</h3>
-            <img src={item.img} alt=""></img>
-            <p>{item.description}</p>
-            <p>{item.precio}</p>
-            <ItemCount stock={item.stock} onAdd={agregarAlCarrito} />
+    return <div className="cardComponent">
+            <h3>{title}</h3>
+            <img src={img} alt=""></img>
+            <p>{description}</p>
+            <p>{precio}</p>
+            <ItemCount stock={stock} onAdd={agregarAlCarrito} />
     </div>
 }
 
