@@ -304,9 +304,9 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border: 2px solid lightseagreen;
+  border: 2px solid brown;
   border-radius: 2px;
-  color: lightseagreen;
+  color: brown;
 }
 
 .itemDetail .detailContainer .detailInfo .detailPrecio .contador-card div p {
@@ -314,7 +314,7 @@ button:hover {
 }
 
 .itemDetail .detailContainer .detailInfo .detailPrecio .contador-card div button {
-  color: lightseagreen;
+  color: brown;
   font-size: 2.4rem;
   padding: 0 10px;
   height: 32px;
@@ -322,18 +322,29 @@ button:hover {
 }
 
 .itemDetail .detailContainer .detailInfo .detailPrecio .contador-card div button:hover {
-  background-color: lightseagreen;
+  background-color: brown;
   color: white;
 }
 
 .itemDetail .detailContainer .detailInfo .detailPrecio .contador-card .boton-agregar {
-  background-color: lightseagreen;
+  background-color: brown;
   color: white;
   font-size: 1.6rem;
   padding: 10px 20px;
 }
 
 .itemDetail .detailContainer .detailInfo .detailPrecio .contador-card .boton-agregar:hover {
+  opacity: 0.9;
+}
+
+.itemDetail .detailContainer .detailInfo .detailPrecio .boton-terminar {
+  background-color: brown;
+  color: white;
+  font-size: 1.6rem;
+  padding: 10px 20px;
+}
+
+.itemDetail .detailContainer .detailInfo .detailPrecio .boton-terminar:hover {
   opacity: 0.9;
 }
 /*# sourceMappingURL=styles.css.map */

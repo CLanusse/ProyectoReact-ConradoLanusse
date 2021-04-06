@@ -5,7 +5,7 @@ const ItemCount = ({stock, onAdd})=>{
 
     const sumarCantidad = ()=> counter+1 <= stock ? setCounter(counter + 1) : setCounter(counter);
     const restarCantidad = ()=> counter-1 >= 1 ? setCounter(counter - 1) : setCounter(1);
-    const addHandler = ()=> onAdd(counter);
+    const agregar = ()=> onAdd(counter);
     
     return <div className="contador-card">
                 <div>
@@ -13,7 +13,7 @@ const ItemCount = ({stock, onAdd})=>{
                     <p>{counter}</p>
                     <button onClick={sumarCantidad}>+</button>
                 </div>
-                <button onClick={addHandler} className="boton-agregar">Agregar al carrito</button>
+                <button onClick={agregar} className="boton-agregar">Agregar al carrito</button>
             </div>
 }
 

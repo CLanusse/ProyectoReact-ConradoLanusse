@@ -47,26 +47,26 @@
                         justify-content: space-between;
                         margin-bottom: 10px;
                         align-items: center;
-                        border: 2px solid lightseagreen;
+                        border: 2px solid brown;
                         border-radius: 2px; 
-                        color: lightseagreen;
+                        color: brown;
                         p {
                             margin: 0;
                         }
                         button {
-                            color: lightseagreen;
+                            color: brown;
                             font-size: 2.4rem;
                             padding: 0 10px;
                             height: 32px;
                             width: 32px;
                             &:hover {
-                                background-color: lightseagreen;
+                                background-color: brown;
                                 color: white;
                             }
                         }
                     }
                     .boton-agregar {
-                        background-color: lightseagreen;
+                        background-color: brown;
                         color: white;
                         font-size: 1.6rem;
                         padding: 10px 20px;
@@ -74,11 +74,22 @@
                             opacity: 0.9;
                         }
                     }
+                    
+                }
+                .boton-terminar {
+                    background-color: brown;
+                    color: white;
+                    font-size: 1.6rem;
+                    padding: 10px 20px;
+                    &:hover {
+                        opacity: 0.9;
+                    }
                 }
             }
         }
         
     }
+   
 }
 
 

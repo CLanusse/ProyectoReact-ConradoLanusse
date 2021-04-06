@@ -15,7 +15,7 @@ const ItemListContainer = ()=>{
             if (categoryId === 'todos') {
                 setProductos(res)
             } else {
-                setProductos(res.filter(prods => prods.category == categoryId))
+                setProductos(res.filter(prods => prods.category === categoryId))
             }
         })
     }, [categoryId])

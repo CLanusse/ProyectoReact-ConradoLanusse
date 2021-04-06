@@ -11,7 +11,7 @@ const ItemDetailContainer = () => {
 
 
     useEffect(()=>{
-        getStock().then(res => setItem(res.find(prod => prod.id == itemId)))
+        getStock().then(res => setItem(res.find(prod => prod.id === parseInt(itemId))))
     }, [itemId])
 
     return <ItemDetail {...item}/>
