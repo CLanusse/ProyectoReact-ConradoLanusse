@@ -4,17 +4,25 @@ import getStock from '../stock/stock';
 import ItemList from './ItemList'
 
 
-const ItemListContainer = ({greeting})=>{
+const ItemListContainer = ()=>{
     const [productos, setProductos] = useState([])
 
     const {categoryId} = useParams()
+    
 
     useEffect(()=>{
-        getStock().then(res => setProductos(res.filter(prods => prods.category == categoryId)))
+        getStock().then(res => {
+            if (categoryId === 'todos') {
+                setProductos(res)
+            } else {
+                setProductos(res.filter(prods => prods.category == categoryId))
+            }
+        })
     }, [categoryId])
 
+
     return <section className="productos">
-        <h2>{greeting}</h2>
+        <h2>{categoryId}</h2>
         <ItemList items={productos}/>
     </section>
 }

@@ -15,10 +15,11 @@ function App() {
 
           <Route exact path="/">
             Página de inicio en construcción...
+            <ItemListContainer/>
           </Route>
 
           <Route path="/category/:categoryId">
-            <ItemListContainer greeting="¡Nuestros últimos productos!"/>
+            <ItemListContainer />
           </Route>
 
           <Route path="/item/:itemId">
