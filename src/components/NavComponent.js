@@ -2,8 +2,9 @@ import React from 'react';
 import CartWidget from './CartWidget'
 import {Link} from 'react-router-dom'
 
-
 const NavComponent = ()=>{
+
+    
     return (
     
     <header className="header">
@@ -11,7 +12,7 @@ const NavComponent = ()=>{
             <Link to="/">
                 <h1>Logo E-Commerce</h1>
             </Link>
-            <CartWidget contador={0} />
+            <CartWidget/>
         </div>
 
         <nav>
