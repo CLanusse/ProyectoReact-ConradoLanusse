@@ -2,6 +2,7 @@ import React, {useState, useEffect }from 'react';
 import { useParams } from 'react-router-dom';
 import getStock from '../stock/stock';
 import ItemList from './ItemList'
+import { Loader } from './Loader';
 
 
 const ItemListContainer = ()=>{
@@ -11,6 +12,7 @@ const ItemListContainer = ()=>{
     
 
     useEffect(()=>{
+        setProductos([])
         getStock().then(res => {
             if (categoryId === 'todos') {
                 setProductos(res)
@@ -20,11 +22,15 @@ const ItemListContainer = ()=>{
         })
     }, [categoryId])
 
-
-    return <section className="productos">
-        <h2>{categoryId}</h2>
-        <ItemList items={productos}/>
-    </section>
+    return <>
+           {
+            !productos.length ? <Loader/>
+            :
+            <section className="productos">
+                    <h2>{categoryId}</h2>
+                    <ItemList items={productos}/>
+            </section>
+            }
+   </>
 }
-
-export default ItemListContainer;
+export default ItemListContainer

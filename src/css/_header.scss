@@ -12,6 +12,7 @@
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        align-items: center;
         width: 100%;
         h1 {
             font-family: 'Roboto', sans-serif;
@@ -20,17 +21,22 @@
             text-transform: uppercase;
         }
         
-        button {
-                
+        a{
+            transition: all 1s ease-in-out;
             .nav__carrito {
                 margin-left: 15px;
                 font-size: 2.4rem;
                 color: brown;
             }
             span {
+                
                 color: brown;
                 font-size: 2rem;
             }
+        }
+        .nav__cart--hidden {
+            visibility: hidden;
+            opacity: 0;
         }
     }
     nav {
