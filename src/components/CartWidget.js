@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 const CartWidget = ()=> {
     const {cart} = useContext(CartContext)
 
-    return <Link to='/cart' className={!cart.length && 'nav__cart--hidden'}>
+    return <Link to='/cart' className={cart.length === 0 ? 'nav__cart--hidden' : ''}>
             <FontAwesomeIcon icon={faShoppingCart} className="nav__carrito"/>
             <span>{cart.reduce((acc, el) => acc += el.quantity, 0)}</span>
         </Link>

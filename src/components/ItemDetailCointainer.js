@@ -1,22 +1,30 @@
 import React, {useState, useEffect }from 'react';
 import { useParams } from 'react-router-dom';
-import getStock from '../stock/stock';
+import { getFirestore } from '../firebase/client';
 import ItemDetail from './ItemDetail';
 import { Loader } from './Loader';
 
 
 const ItemDetailContainer = () => {
     const [item, setItem] = useState(null)
+    const [loading, setLoading] = useState(true)
 
     const {itemId} = useParams()
 
-
     useEffect(()=>{
-        getStock().then(res => setItem(res.find(prod => prod.id === parseInt(itemId))))
+        setLoading(true)
+        const database = getFirestore()
+        const itemCollection = database.collection('items')
+        const item = itemCollection.doc(itemId)
+        item.get().then( doc => {
+            setItem({id: doc.id, ...doc.data()})
+        }).finally(()=>{
+            setLoading(false)
+        })
     }, [itemId])
 
     return <>
-             {item === null ? <Loader/> : <ItemDetail item={item}/>}
+             {loading ? <Loader/> : <ItemDetail item={item}/>}
           </>
     
 }
