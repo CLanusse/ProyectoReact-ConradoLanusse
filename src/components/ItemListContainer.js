@@ -26,9 +26,9 @@ const ItemListContainer = ()=>{
                 setLoading(false)
             })
         } else {
-            itemCollection.where('category','==', categoryId).get().then( res => {
+            itemCollection.get().then( res => {              
                 const data = res.docs.map(doc => ({id: doc.id, ...doc.data()}))
-                setProductos(data)
+                setProductos(data.filter(el => el.category === categoryId))
             }).finally(()=>{
                 setLoading(false)
             })
