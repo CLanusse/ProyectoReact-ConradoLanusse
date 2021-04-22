@@ -23,13 +23,12 @@ export const CartProvider = ({children}) => {
         setCart([])
     }
 
-    const isInCart = (id) => {
-        const itemFound = cart.find(el => el.item.id === id)
-        return itemFound ? true : false
+    const totalCart = ()=> {
+        return cart.reduce((acc, itemCart) => (acc += (itemCart.quantity * itemCart.item.precio)),0)
     }
 
     return (
-        <CartContext.Provider value={{cart, addItem, removeItem, clear, isInCart}}>
+        <CartContext.Provider value={{cart, addItem, removeItem, clear, totalCart}}>
             {children}
         </CartContext.Provider>
     )

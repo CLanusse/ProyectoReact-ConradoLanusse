@@ -7,7 +7,7 @@ const ItemDetail = ({item}) => {
 
     const [count, setCount] = useState(0)
 
-    const {addItem, cart} = useContext(CartContext)
+    const {addItem} = useContext(CartContext)
 
     const addHandler = (cantidad)=> {
         addItem(item, cantidad)
