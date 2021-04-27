@@ -12,7 +12,7 @@ export const Cart = ()=>{
     const {cart, removeItem, clear, totalCart} = useContext(CartContext)
 
     const generarOrden = async ()=> {
-        // tengo la db
+        
         const db = getFirestore()
 
         const ordersColection = db.collection('orders')
@@ -23,8 +23,6 @@ export const Cart = ()=>{
             date: firebase.firestore.Timestamp.fromDate(new Date()),
             total: totalCart()
         }
-        
-        // pido items para comparar stock
 
         const itemsToUpdate = db.collection('items').where(
             firebase.firestore.FieldPath.documentId(), 'in', cart.map(el => el.item.id)
@@ -48,7 +46,7 @@ export const Cart = ()=>{
 
                 ordersColection.add(orden)
                     .then(res => {
-                        console.log(res.id)
+                        console.log('Orden número: ' + res.id)
                         clear()
                     })
                     .catch(err => console.log(err))
