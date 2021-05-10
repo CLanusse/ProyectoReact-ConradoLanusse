@@ -1,12 +1,11 @@
 .header {
     min-height: 15vh;
-    background-color: khaki;
-    box-shadow: 0px 5px 4px 5px rgba(0, 0, 0, 0.3);
+    background-color: #333;
+    box-shadow: 0px 0px 28px 0px rgba(51, 51, 51, 0.3);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    padding: 0 10%;
 
     div {
         display: flex;
@@ -15,39 +14,63 @@
         align-items: center;
         width: 100%;
         h1 {
-            font-family: 'Roboto', sans-serif;
-            font-size: 3.6rem;
+            font-family: 'Tangerine';
+            font-size: 60px;
             font-weight: 700;
-            text-transform: uppercase;
+            color: #FFF;
         }
         
-        a{
-            transition: all 1s ease-in-out;
+        .nav__cart {
+            visibility: hidden;
+            opacity: 0;
+            transition: all .5s ease-in-out;
+            position: absolute;
+            right: 10%;
+            top: 45px;
+            padding: 0 5px;
             .nav__carrito {
-                margin-left: 15px;
+                
                 font-size: 2.4rem;
-                color: brown;
+                color: #fff;
             }
             span {
                 
-                color: brown;
+                color: #fff;
                 font-size: 2rem;
             }
+            .cartW-precio{
+                position: absolute;
+                right: -30px;
+                top: 5px;
+                color: #FFF;
+                font-weight: 700;
+                opacity: 0;
+                transition: all .5s ease-out;
+            }
+            &:hover {
+                background-color: brown;
+                padding-left: 88px;
+                .cartW-precio {
+                    opacity: 1;
+                    right: 58px;
+                    transition: all .5s ease-out .2s;
+                }
+            }
         }
-        .nav__cart--hidden {
-            visibility: hidden;
-            opacity: 0;
+        .nav__cart--show {
+            visibility: visible;
+            opacity: 1;
         }
     }
     nav {
-        width: 90%;
+        width: 95%;
         display: flex;
         justify-content: space-between;
         align-items: center;
 
         .categoria {
             background-color: transparent;
-            color: brown;
+            color: #FFF;
             font-size: 1.6rem;
             text-transform: uppercase;
             padding: 5px 30px;

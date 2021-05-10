@@ -10,17 +10,18 @@ const NavComponent = ()=>{
     <header className="header">
         <div>
             <Link to="/">
-                <h1>Logo E-Commerce</h1>
+                <h1>John Cook Bodega</h1>
             </Link>
             <CartWidget/>
         </div>
 
         <nav>
-            <Link to={`/category/todos`} className="categoria">Todos</Link>
-            <Link to={`/category/vinos`} className="categoria">Vinos</Link>
-            <Link to={`/category/cervezas`} className="categoria">Cervezas</Link>
-            <Link to={`/category/licores`} className="categoria">Licores</Link>
-            <Link to={`/category/whiskys`} className="categoria">Whiskys</Link>
+            <Link to={`/category/catalogo`} className="categoria">Todos los productos</Link>
+            <Link to={`/category/vinos tintos`} className="categoria">Vinos Tintos</Link>
+            <Link to={`/category/vinos blancos y rosados`} className="categoria">Vinos Blancos y Rosados</Link>
+            <Link to={`/category/vinos organicos`} className="categoria">Vinos Orgánicos</Link>
+            <Link to={`/category/cajas`} className="categoria">Cajas</Link>
+            <Link to={`/category/bebidas espirituosas`} className="categoria">Bebidas espirituosas</Link>
         </nav>
     </header>
             

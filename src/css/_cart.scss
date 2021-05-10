@@ -39,7 +39,7 @@
         padding-right: 20px;
         margin-top: 20px;
         border-left: 5px solid rgb(163, 94, 94);
-        box-shadow: 5px 3px 10px 0px rgba(0, 0, 0, 0.2);
+        box-shadow: 5px 3px 10px 0px rgba(51, 51, 51, 0.3);
 
         &:hover {
             border-left: 5px solid brown;
@@ -56,7 +56,7 @@
 
                 .cartItemTitle {
                     font-weight: 700;
-                    font-size: 1.8rem;
+                    font-size: 1.6rem;
                     text-transform: uppercase;
                 }
             }
@@ -111,18 +111,19 @@
         align-items: center;
         width: 340px;
 
-        button {
+        button, a {
             background-color: brown;
             color: white;
             font-size: 1.6rem;
+            font-family: 'Roboto', sans-serif;
             padding: 10px 20px;
             &:hover {
                 opacity: 0.9;
             }
-
-            &:last-of-type {
-                background-color: rgb(60, 139, 60);
-            }
+        }
+        a {
+            background-color: rgb(60, 139, 60);
+            line-height: 1.2;
         }
     }
 }

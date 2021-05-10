@@ -21,7 +21,7 @@ const ItemDetail = ({item}) => {
                 <div className="detailInfo">
                     <p>{item?.detail}</p>
                     <div className="detailPrecio">
-                        <p>Precio: ${item?.precio}</p>
+                        <p>Precio: ${(item?.precio).toFixed(2)}</p>
 
                         {count === 0 ? 
                             <ItemCount stock={item?.stock} onAdd={addHandler} />
@@ -33,7 +33,7 @@ const ItemDetail = ({item}) => {
                     </div>
                 </div>
             </div>
-            <Link to={`/category/${item?.category}`}>Volver</Link>
+            <Link to={`/category/${item?.category}`} className="boton-volver">Volver</Link>
     </div>
 
 }

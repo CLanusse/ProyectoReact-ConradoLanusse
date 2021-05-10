@@ -16,43 +16,64 @@
         flex-wrap: wrap;
         justify-content: space-around;
         .cardComponent {
+            position: relative;
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
             max-width: 200px;
             margin: 20px;
             margin-bottom: 30px;
-            box-shadow: 2px 6px 4px 4px rgba(0,0,0,0.3);
+            box-shadow: 0px 0px 16px 0px rgba(20,20,20,0.3);
             h3 {
-                margin-top: 10px;
-                font-size: 2.6rem;
+                padding: 10px;
+                font-size: 1.6rem;
+                text-align: center;
             }
             img {
                 width: 100%;
             }
             p {
-                margin-top: 10px;
-                padding: 0 20px;
+                padding: 10px;
                 font-weight: 700;
             }
-            .verMas {
-                background-color: transparent;
-                color: brown;
-                font-size: 1.6rem;
-                text-transform: uppercase;
-                padding: 5px 30px;
-                font-weight: 700;
+            .btn-item{
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
                 width: 100%;
-                transition: all .3s;
-                text-align: center;
-
-                &:focus {
-                    outline: none;
-                }
-                &:hover {
-                    cursor: pointer;
+                z-index: 1;
+                background-color: rgba(255,255,255,0.7);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                visibility: hidden;
+                opacity: 0;
+                transition: all .4s ease-out;
+                .verMas {
+                    background-color: transparent;
                     background-color: brown;
                     color: whitesmoke;
+                    font-size: 1.6rem;
+                    text-transform: uppercase;
+                    padding: 5px 30px;
+                    font-weight: 700;
+                    width: 70%;
+                    text-align: center;
+    
+                    &:focus {
+                        outline: none;
+                    }
+                    &:hover {
+                        background-color: rgb(170, 62, 62);
+                    }
+                }
+            }
+            &:hover {
+                .btn-item {
+                    visibility: visible;
+                    opacity: 1;
                 }
             }
             

@@ -1,0 +1,202 @@
+.checkoutContainer {
+    max-width: 1100px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .buyerData {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .buyer-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            legend {
+                margin-bottom: 20px;
+            }
+            .buyer-input {
+                width: 400px;
+                font-size: 14px;
+                padding: 8px 16px;
+                border: 2px solid rgba(165, 42, 42, 0.5);
+                border-radius: 5px;
+                margin-bottom: 16px;
+    
+                &:focus{
+                    outline: none;
+                    border: 2px solid rgba(165, 42, 42, 1);
+                }
+            }
+        }
+
+        .dataButtons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 340px;
+
+            button, a {
+                background-color: rgb(60, 139, 60);
+                color: white;
+                font-size: 1.6rem;
+                font-family: 'Roboto', sans-serif;
+                padding: 10px 20px;
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+            a {
+                background-color: brown;
+                line-height: 1.2;
+            }
+        }
+    }
+
+    .finalizar-compra {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Roboto', sans-serif;
+        ul {
+            padding: 10px;
+            li {
+                font-family: 'Roboto', sans-serif;
+                list-style: none;
+            }
+        }
+        .dataButtons {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 340px;
+
+            button {
+                background-color: brown;
+                color: white;
+                font-size: 1.6rem;
+                font-family: 'Roboto', sans-serif;
+                padding: 10px 20px;
+
+                &:last-of-type {
+                    background-color: rgb(60, 139, 60);
+                }
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+        span {
+            font-weight: 700
+        }
+    }
+
+    .success {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .codigo {
+            font-size: 2.2rem;
+            font-weight: 700;
+            padding: 5px 40px;
+            border-radius: 10px;
+            margin: 20px 0;
+            color: #FFF;
+            background-color: rgb(60, 139, 60);
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+
+        .last {
+            font-size: 20px;
+        }
+
+        a {
+            background-color: brown;
+            line-height: 1.2;
+            color: white;
+            font-size: 1.6rem;
+            font-family: 'Roboto', sans-serif;
+            padding: 10px 20px;
+            font-weight: 700;
+            margin-top: 20px;
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    .outofstock {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .outofstock__item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 500px;
+            border-left: 5px solid rgb(163, 94, 94);
+            border-radius: 5px;
+            box-shadow: 5px 3px 10px 0px rgba(51, 51, 51, 0.3);
+            padding-right: 20px;
+            margin: 10px 0;
+            &:hover {
+                border-left: 5px solid brown;
+            }
+            img {
+                width: 20%;
+            }
+            p {
+                &:first-of-type {
+                    font-weight: 700;
+                }
+            }
+        }
+
+        a {
+            margin-top: 20px;
+            background-color: brown;
+            line-height: 1.2;
+            color: white;
+            font-size: 1.6rem;
+            font-family: 'Roboto', sans-serif;
+            padding: 10px 20px;
+            font-weight: 700;
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+
+    .form-error {
+        position: fixed;
+        bottom: 30px;
+        left: 30px;
+        color: white;
+        font-size: 12px;
+        width: 200px;
+        margin: 0;
+        padding: 5px 10px;
+        background-color: rgba(185, 53, 53, 0.8);
+        visibility: hidden;
+        opacity: 0;
+        transition: all 1s ease-out;
+    }
+
+    .form-error-show {
+        visibility: visible;
+        opacity: 1;
+    }
+}
