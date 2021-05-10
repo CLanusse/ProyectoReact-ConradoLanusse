@@ -46,7 +46,7 @@ function App() {
                 </Route>
 
                 <Route path="*">
-                  404
+                  <IndexComponent/>
                 </Route>
 
               </Switch>
