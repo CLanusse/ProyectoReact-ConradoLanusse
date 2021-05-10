@@ -5,6 +5,8 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import { CartProvider } from './context/CartContext'
 import { Cart } from './components/Cart'
 import { Checkout } from './components/Checkout'
+import { FooterComponent } from './components/FooterComponent'
+import { IndexComponent } from './components/IndexComponent'
 
 
 
@@ -21,34 +23,34 @@ function App() {
           <div>
             
             <NavComponent />
-            <Switch>
+              <Switch>
 
-              <Route exact path="/">
-                Página de inicio en construcción...
-                <ItemListContainer/>
-              </Route>
+                <Route exact path="/">
+                  <IndexComponent/>
+                </Route>
 
-              <Route path="/category/:categoryId">
-                <ItemListContainer />
-              </Route>
+                <Route path="/category/:categoryId">
+                  <ItemListContainer />
+                </Route>
 
-              <Route path="/item/:itemId">
-                <ItemDetailContainer />
-              </Route>
+                <Route path="/item/:itemId">
+                  <ItemDetailContainer />
+                </Route>
 
-              <Route path="/cart">
-                <Cart />
-              </Route>
+                <Route path="/cart">
+                  <Cart />
+                </Route>
 
-              <Route path="/checkout">
-                <Checkout />
-              </Route>
+                <Route path="/checkout">
+                  <Checkout />
+                </Route>
 
-              <Route path="*">
-                404
-              </Route>
+                <Route path="*">
+                  404
+                </Route>
 
-            </Switch>
+              </Switch>
+            <FooterComponent/>
           </div>
 
         </BrowserRouter>

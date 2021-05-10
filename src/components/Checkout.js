@@ -54,12 +54,10 @@ export const Checkout = () => {
             setLoading(true)
             generarOrden({name: values.name, tel: values.tel, email: values.email}, cart)
                 .then(res => {
-                    console.log('Orden numero:' + res)
                     clear()
                     setResponse(res)
                 })
                 .catch(err =>{ 
-                    console.log(err)
                     setResponse(err)
                 })
                 .finally(()=>{
@@ -144,9 +142,9 @@ export const Checkout = () => {
         }
 
 
-        <div className={showError ? "form-error form-error-show" : "form-error"}>
-            <p>Campos vacíos o inválidos. Verifique los datos ingresados.</p>
-        </div>
+            <div className={showError ? "form-error form-error-show" : "form-error"}>
+                <p>Campos vacíos o inválidos. Verifique los datos ingresados.</p>
+            </div>
         </div>
     )
 }
