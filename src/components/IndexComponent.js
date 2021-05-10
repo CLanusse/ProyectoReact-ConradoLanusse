@@ -12,7 +12,7 @@ export const IndexComponent = () => {
             } else {
                 setCounter(counter + 1)
             }
-        }, 5000)
+        },5000)
     }, [counter])
 
     return (

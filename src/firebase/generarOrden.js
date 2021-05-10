@@ -21,9 +21,10 @@ export const generarOrden = async (user, cart) => {
         const batch = db.batch()
         const outOfStock = []
 
-        query.docs.forEach( (docSnapshot, i) => {
-            if (docSnapshot.data().stock >= cart[i].quantity) {
-                batch.update(docSnapshot.ref, {stock: docSnapshot.data().stock - cart[i].quantity})
+        query.docs.forEach( (docSnapshot) => {
+            const itemInCart = cart.find(el => el.item.id === docSnapshot.id)
+            if (docSnapshot.data().stock >= itemInCart.quantity) {
+                batch.update(docSnapshot.ref, {stock: docSnapshot.data().stock - itemInCart.quantity})
             } else {
                 outOfStock.push({id: docSnapshot.id, ...docSnapshot.data()})
             }
